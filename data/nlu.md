@@ -1153,3 +1153,9 @@
 - the [package was open](issue)
 - the [delivery agent ate my food](issue)
 - the delivery agent [did not deliver](issue) the order
+- the [package was damaged](issue)
+- the order was [delivered late](issue)
+- the delivery [arrived later](issue) than 30 Minutes
+- [delivery agent was rude](issue)
+- delivery agent [demanded more than order summary](issue)
+- the delivery [agent was inappropriate](issue)
