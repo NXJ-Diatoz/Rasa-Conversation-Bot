@@ -1,42 +1,67 @@
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - tell_issue
-  - explain_issue
-
 actions:
-- utter_greet
 - utter_cheer_up
+- utter_details_confirm
 - utter_did_that_help
-- utter_happy
+- utter_explain_issue
 - utter_goodbye
+- utter_greet
+- utter_happy
 - utter_iamabot
-
+- utter_order_number
+- utter_restaurant_query
+entities:
+- food_name
+- issue
+- order_number
+- restaurant_name
+intents:
+- tell_issue
+- greet
+- affirm
+- Order_number
+- restaurant_names
+- explain_issue_Food
+- goodbye
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- explain_food_issue_restaurant
+- Food_names
+- explain_issue
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_details_confirm:
+  - text: 'you faced the following issue :{issue} with you order with order number:{order_number}
+      from the restaurant: {restaurant_name} with items:{food_name}'
   utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Did that help you?
+  utter_explain_issue:
+  - text: Can you elaborate on the Issue?
+  - text: Can you be more elaborate?
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
+  utter_greet:
+  - text: Hey! How are you?
+  utter_happy:
+  - text: Great, carry on!
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+  - text: I am a bot, powered by Rasa.
+  utter_order_number:
+  - text: Can you provide the order number?
+  utter_restaurant_query:
+  - text: At which restaurant did you make the order?
 session_config:
-  session_expiration_time: 60
   carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  food_name:
+    type: text
+  issue:
+    type: text
+  order_number:
+    type: text
+  restaurant_name:
+    type: text

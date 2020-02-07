@@ -6,7 +6,6 @@
 - hey there
 - Hey! I need Help
 
-
 ## intent:goodbye
 - bye
 - goodbye
@@ -58,11 +57,12 @@
 
 ## intent:tell_issue
 - I have an issue with my order
-- I have an issue with my reservation
 - I have an issue with the delivery of my order
-- I have an issue with a restaurant
+- I have an issue with an order on the app
+- I have an issue with my delivery agent
 - I have an issue with a restaurant I booked
-- I have an issue with my table reservation
+- i have an issue with my order
+
 ## intent:explain_issue_Food
 - The [Burger](food_name) I had ordered is [spoilt](issue)
 - The [Flaxseed and sultana bread](food_name) ordered is [ruined](issue)
@@ -93,6 +93,7 @@
 - had orded [Fire-Roasted Orange Yak](food_name) but received a very [foul smelling package](issue)
 - had orded [Oven-Grilled Honey Mutton](food_name) but received a very [foul smelling package](issue)
 - had ordered [Seared Egg & Beet Alligator](food_name) but received a [different dish](issue)
+- the [noodles](food_name) i had ordered is [spoilt](issue)
 
 ## intent:explain_food_issue_restaurant
 - I had ordered [Slow-Cooked Saffron & Shallot Trout](food_name) from [Pizza Italy pizzeria italiana](restaurant_name) but it [wasn't delivered](issue)
@@ -144,11 +145,11 @@
 - [Aatukkari Kuzhambu with Steamed Rice](food_name) was the dish that was ordered
 
 ## intent:Order_number
-- My order number is[ORD81IN28CH39]
-- My order number is[ORD48IN80CH35]
-- My order number is[ORD19IN81CH31]
-- My order number is[ORD04IN88CH32]
-- My order number is[ORD99IN15CH30]
+- My order number is[ORD81IN28CH39](order_number)
+- My order number is[ORD48IN80CH35](order_number)
+- My order number is[ORD19IN81CH31](order_number)
+- My order number is[ORD04IN88CH32](order_number)
+- My order number is[ORD99IN15CH30](order_number)
 - My order number is[ORD36IN65CH33](order_number)
 - My order number is[ORD56IN97CH34](order_number)
 - My order number is[ORD16IN26CH38](order_number)
@@ -1139,6 +1140,7 @@
 - [ORD65IN55CH32](order_number)
 - [ORD91IN13CH32](order_number)
 - [ORD07IN47CH39](order_number)
+- the order number is [ORD74IN64CH57](order_number)
 
 ## intent:explain_issue
 - the order was [delivered to the wrong address](issue)
@@ -1150,7 +1152,6 @@
 - the food was [infested with worms](issue)
 - there was a [worm in the food](issue)
 - there was a [insect in the food](issue)
-- the [package was open](issue)
 - the [delivery agent ate my food](issue)
 - the delivery agent [did not deliver](issue) the order
 - the [package was damaged](issue)
@@ -1159,3 +1160,6 @@
 - [delivery agent was rude](issue)
 - delivery agent [demanded more than order summary](issue)
 - the delivery [agent was inappropriate](issue)
+
+## intent:restaurant_names
+- at the [Taj Hotels](restaurant_name)
